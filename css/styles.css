@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --bg-color: #ECF7FF;
+  --primary-color: #050A30;
+  --secondary-color: #05445E;
+  --tertiary-color: #789DAE;
+  --gradient-start-color: #DCECF8;
+  --gradient-end-color: #EDF6FC;
+  --highlight-color: #ABC7D5;
+  --arts-and-culture-color: #EAE0FF;
+  --ict-color: #F7FFD7;
+  --business-color: #FFEEE0;
+  --health-and-wellness-color: #FFE1DF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-appearance: none !important;
+}
+
+body {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 100vw;
+}
+
+a {
+  color: var(--tertiary-color);
+}
+
+/* Navigation Bar */
+.navbar {
+  margin: 50px auto;
+  width: 1400px;
+  display: grid;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 60px;
+}
+
+.nav-title {
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-left: 20px;
+  color: var(--primary-color);
+}
+
+.nav-title-light {
+  color: var(--tertiary-color);
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--tertiary-color);
+  margin-left: 60px;
+  filter: none;
+  transition: filter .2s ease-in-out;
+}
+
+.nav-item:hover {
+  filter: brightness(0.6);
+}
+
+.current-page {
+  color: var(--primary-color);
+}
+
+.dark-mode-toggle {
+  background-color: transparent;
+  border: none;
+  margin-top: 10px;
+  justify-self: end;
+  cursor: pointer;
+}
