@@ -49,3 +49,38 @@ document.addEventListener('click', function (e) {
   }
   console.log(dropdownOpen);
 });
+
+let darkMode = localStorage.getItem('darkMode');
+const darkModeToggle = document.querySelector('#darkModeToggle');
+
+const enableDarkMode = () => {
+  document.documentElement.setAttribute('data-theme', 'dark');
+  localStorage.setItem('darkMode', 'enabled');
+  changeIconToDark();
+}
+
+const disableDarkMode = () => {
+  document.documentElement.setAttribute('data-theme', 'light');
+  localStorage.setItem('darkMode', 'disabled');
+  changeIconToLight();
+}
+
+const changeIconToDark = () => {
+  document.getElementById("darkModeIcon").src = "images/icons/moon.svg";
+}
+const changeIconToLight = () => {
+  document.getElementById("darkModeIcon").src = 'images/icons/sun-1.svg';
+}
+
+if (darkMode === 'enabled') {
+  enableDarkMode();
+}
+
+darkModeToggle.addEventListener('click', () => {
+  darkMode = localStorage.getItem('darkMode');
+  if (darkMode !== 'enabled') {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
+});
