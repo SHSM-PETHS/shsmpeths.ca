@@ -47,7 +47,7 @@
         <li class="nav-item"><a href="/" class="current-page">Home</a></li>
         <li class="nav-item"><a href="join-us">Join Us</a></li>
         <li class="nav-item dropdown">
-          <a>Sectors</a>
+          Sectors
           <ul class="dropdown-items">
             <li class="dropdown-item"><a href="arts-and-culture">Arts and Culture</a></li>
             <li class="dropdown-item"><a href="business">Business</a></li>
@@ -60,15 +60,16 @@
         <li class="nav-item"><a href="contact">Contact</a></li>
       </ul>
     </div>
-    <button type="button" class="dark-mode-toggle" id="darkModeToggle">
-      <img src="images/icons/sun-1.svg" alt="Dark Mode Toggle" class="dark-mode-icon" id="darkModeIcon">
+    <button type="button" class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle Dark Mode">
+      <img src="images/icons/sun-1.svg" alt="Dark Mode Toggle" class="dark-mode-icon icon" id="darkModeIcon">
     </button>
   </nav>
   <div class="menu-background" id="menuBackground"></div>
+  <figure><img src="images/wave.svg" alt="Wave Figure" class="wave"></figure>
   <div>
-    <div class="bg-light first-section">
+    <section class="bg-light first-section">
       <div class="container">
-        <div class="header">
+        <header class="header">
           <div class="header-text">
             <p class="intro-phrase">Hi there!</p>
             <h1 class="title">Welcome to SHSM PETHS.</h1>
@@ -77,10 +78,10 @@
             <a href="" class="btn-main">Join Us!</a>
             <a href="" class="btn-sub">Our Sectors</a>
           </div>
-        </div>
+        </header>
       </div>
-    </div>
-    <div class="bg-dark">
+    </section>
+    <section class="bg-dark">
       <div class="container">
         <h2 class="section-title">Who we are</h2>
         <p class="description">Specialist High Skills Majors (SHSM) is for <strong>motivated</strong> individuals like
@@ -89,64 +90,76 @@
           also be able to earn the SHSM seal on your diploma by meeting the following requirements:</p>
         <div class="col-3">
           <div class="card-3">
-            <img src="images/icons/book-1.svg" alt="Courses Icon" class="card-icon">
+            <img src="images/icons/book-1.svg" alt="Icon for SHSM course bundles." class="card-icon icon">
             <p class="card-text">Complete a specific bundle of 8-10 courses in your selected field.</p>
           </div>
           <div class="card-3">
-            <img src="images/icons/heart.svg" alt="Heart Icon" class="card-icon">
+            <img src="images/icons/heart.svg" alt="Icon for SHSM certifications" class="card-icon icon">
             <p class="card-text">Earn valuable industry certifications such as first aid and CPR qualifications.</p>
           </div>
           <div class="card-3">
-            <img src="images/icons/briefcase.svg" alt="Briefcase Icon" class="card-icon">
+            <img src="images/icons/briefcase.svg" alt="Icon for courses needed in SHSM student's field of interest"
+              class="card-icon icon">
             <p class="card-text">Complete a specific bundle of 8-10 courses in your selected field.</p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="bg-light">
+    </section>
+    <section class="bg-light">
       <div class="container">
         <h2 class="section-title">Our sectors</h2>
         <div class="col-4">
-          <div class="card-4">
-            <h4 class="sector-name">Arts and Culture</h4>
-            <div class="sector-button">
-              <img src="images/icons/brush-2.svg" alt="" class="sector-icon">
+          <a href="arts-and-culture" target="_blank">
+            <div class=" card-4">
+              <h4 class="sector-name">Arts and Culture</h4>
+              <div class="sector-button">
+                <img src="images/icons/brush-2.svg" alt="Arts and Culture Icon" class="sector-icon icon">
+              </div>
             </div>
-          </div>
-          <div class="card-4">
-            <h4 class="sector-name">Business</h4>
-            <div class="sector-button">
-              <img src="images/icons/chart-1.svg" alt="" class="sector-icon">
+          </a>
+          <a href="business" target="_blank">
+            <div class="card-4">
+              <h4 class="sector-name">Business</h4>
+              <div class="sector-button">
+                <img src="images/icons/chart-1.svg" alt="Business Icon" class="sector-icon icon">
+              </div>
             </div>
-          </div>
-          <div class="card-4">
-            <h4 class="sector-name">Health and Wellness</h4>
-            <div class="sector-button">
-              <img src="images/icons/hospital.svg" alt="" class="sector-icon">
+          </a>
+          <a href="health-and-wellness" target="_blank">
+            <div class="card-4">
+              <h4 class="sector-name">Health and Wellness</h4>
+              <div class="sector-button">
+                <img src="images/icons/hospital.svg" alt="Health and Wellness Icon" class="sector-icon icon">
+              </div>
             </div>
-          </div>
-          <div class="card-4">
-            <h4 class="sector-name">Information and Communications Technology</h4>
-            <div class="sector-button">
-              <img src="images/icons/monitor.svg" alt="" class="sector-icon">
+          </a>
+          <a href="ict" target="_blank">
+            <div class="card-4">
+              <h4 class="sector-name">Information and Communications Technology</h4>
+              <div class="sector-button">
+                <img src="images/icons/monitor.svg" alt="Information and Communications Technology (ICT) Icon"
+                  class="sector-icon icon">
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   </div>
   <footer class="footer">
     <div>
       <h3 class="footer-title">SHSM <span class="footer-title-light">PETHS</span></h3>
-      <a href="mailto:shsm.peths@gmail.com">
+      <a href="mailto:shsm.peths@gmail.com" target="_blank">
         <p class="footer-email">shsm.peths@gmail.com</p>
       </a>
     </div>
     <div class="footer-icons">
       <a href="https://www.instagram.com/shsm.peths/" class="footer-icon" target="_blank"><img
-          src="images/icons/instagram.svg" alt="" class="icon"></a>
-      <a href="" class="footer-icon"><img src="images/icons/classroom.svg" alt="" class="icon"></a>
-      <a href="" class="footer-icon"><img src="images/icons/linkedin.svg" alt="" class="linkedin-icon"></a>
+          src="images/icons/instagram.svg" alt="SHSM Instagram Icon" class="icon-size"></a>
+      <a href="https://classroom.google.com/c/NDMyOTgwNjcw?cjc=bb7sirw" class="footer-icon" target="_blank"><img
+          src="images/icons/classroom.svg" alt="SHSM Google Classroom Icon" class="icon-size"></a>
+      <a href="https://www.linkedin.com/company/shsm-trudeau/about/" class="footer-icon" target="_blank"><img
+          src="images/icons/linkedin.svg" alt="SHSM LinkedIn Icon" class="linkedin-icon"></a>
     </div>
   </footer>
   <script src="scripts.js"></script>

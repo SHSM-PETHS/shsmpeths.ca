@@ -20,6 +20,7 @@
   --ict-card-4-gradient: linear-gradient(90deg, rgba(239, 249, 218, 0.28) 0%, rgba(5, 68, 94, 0.12) 100%);
   --drop-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
   --hover-filter: brightness(0.6);
+  --wave-filter: invert(88%) sepia(7%) saturate(1093%) hue-rotate(185deg) brightness(103%) contrast(104%);
   --icon-filter: invert(4%) sepia(92%) saturate(5212%) hue-rotate(240deg) brightness(66%) contrast(101%);
 }
 
@@ -35,14 +36,15 @@
   --ict-color: #D0DC9F;
   --business-color: #CAB09A;
   --health-and-wellness-color: #D2A7A5;
-  --bg-dark-gradient: linear-gradient(90deg, #384c75 0%, rgba(56, 76, 117, 0) 100%);
+  --bg-dark-gradient: linear-gradient(90deg, #1D2D50 0%, rgba(29, 45, 80, 0) 100%);
   --card-3-gradient: linear-gradient(90deg, #1D2D50 0%, rgba(29, 45, 80, 0) 100%);
-  --arts-and-culture-card-4-gradient: linear-gradient(90deg, rgba(214, 205, 234, 0.28) 0%, rgba(41, 68, 208, 0.4) 100%);
-  --business-card-4-gradient: linear-gradient(90deg, rgba(249, 216, 214, 0.28) 0%, rgba(41, 68, 208, 0.4) 100%);
-  --health-and-wellness-card-4-gradient: linear-gradient(90deg, rgba(249, 235, 223, 0.28) 0%, rgba(41, 68, 208, 0.4) 100%);
-  --ict-card-4-gradient: linear-gradient(90deg, rgba(239, 249, 218, 0.28) 0%, rgba(41, 68, 208, 0.4) 100%);
+  --arts-and-culture-card-4-gradient: linear-gradient(90deg, rgba(214, 205, 234, 0.28) 0%, rgba(29, 45, 80, 1) 100%);
+  --business-card-4-gradient: linear-gradient(90deg, rgba(249, 216, 214, 0.28) 0%, rgba(29, 45, 80, 1) 100%);
+  --health-and-wellness-card-4-gradient: linear-gradient(90deg, rgba(249, 235, 223, 0.28) 0%, rgba(29, 45, 80, 1) 100%);
+  --ict-card-4-gradient: linear-gradient(90deg, rgba(239, 249, 218, 0.28) 0%, rgba(29, 45, 80, 1) 100%);
   --drop-shadow: 0px 8px 30px rgba(255, 255, 255, 0.12);
   --hover-filter: brightness(1.4);
+  --wave-filter: invert(7%) sepia(22%) saturate(6507%) hue-rotate(223deg) brightness(94%) contrast(108%);
   --icon-filter: invert(83%) sepia(5%) saturate(1256%) hue-rotate(183deg) brightness(110%) contrast(102%);
 }
 
@@ -84,7 +86,7 @@ a {
 
 .bg-light,
 .bg-dark {
-  padding: 100px 0px 160px;
+  padding: 120px 0px 160px;
 }
 
 .bg-light {
@@ -128,6 +130,19 @@ a {
   font-family: "Philosopher", sans-serif;
   font-size: 1.25rem;
   color: var(--secondary-color);
+}
+
+.icon {
+  filter: var(--icon-filter);
+}
+
+.wave {
+  filter: var(--wave-filter);
+  height: 300px;
+  position: absolute;
+  top: -30px;
+  right: 0px;
+  z-index: 0;
 }
 
 /* Home */
@@ -262,7 +277,7 @@ a {
 
 /* Navigation Bar */
 .navbar {
-  margin: 50px auto 80px;
+  margin: 50px auto 60px;
   width: 90%;
   display: grid;
   max-width: 1284px;
@@ -290,6 +305,10 @@ a {
   font-weight: 700;
   font-size: 1.5rem;
   margin-left: 20px;
+  color: var(--primary-color);
+}
+
+.footer-title {
   color: var(--primary-color);
 }
 
@@ -356,11 +375,11 @@ a {
   justify-self: end;
   cursor: pointer;
   padding: 0px;
+  z-index: 1;
 }
 
 .dark-mode-icon {
   width: 26px;
-  filter: var(--icon-filter);
 }
 
 .mobile-nav {
@@ -503,13 +522,19 @@ a {
   background-color: #CEE4EF;
 }
 
-.icon {
+.icon-size {
   width: 1.75rem;
 }
 
 .linkedin-icon {
   width: 1.25rem;
   margin: 0.25rem;
+}
+
+@media only screen and (max-width: 1466px) {
+  .wave {
+    height: 250px;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -539,6 +564,10 @@ a {
 
   .card-4 {
     height: 250px;
+  }
+
+  .wave {
+    height: 200px;
   }
 }
 
@@ -602,6 +631,16 @@ a {
 
   .dropdown:hover .dropdown-items {
     visibility: hidden;
+  }
+
+  .wave {
+    min-width: none;
+    height: 200px;
+  }
+
+  .bg-light,
+  .bg-dark {
+    padding: 80px 0px 120px;
   }
 }
 
@@ -693,6 +732,11 @@ a {
   .dark-mode-icon {
     width: 30px;
   }
+
+  .bg-light,
+  .bg-dark {
+    padding: 60px 0px 70px;
+  }
 }
 
 @media only screen and (max-width: 375px) {
@@ -721,5 +765,15 @@ a {
 
   .nav-item:first-of-type {
     margin-top: 10px;
+  }
+
+  .dropdown-item {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 2600px) {
+  .wave {
+    display: none;
   }
 }
