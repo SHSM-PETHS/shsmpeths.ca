@@ -21,10 +21,22 @@
           <h3 class="nav-title">SHSM <span class="nav-title-light">PETHS</span></h3>
         </div>
       </a>
-      <ul class="nav-items">
+      <div class="mobile-nav" id="mobileNav">
+        <div class="menu-btn">
+          <div class="menu-btn-burger"></div>
+        </div>
+      </div>
+      <ul class="nav-items" id="navItems">
         <li class="nav-item"><a href="/" class="current-page">Home</a></li>
         <li class="nav-item"><a href="/">Join Us</a></li>
-        <li class="nav-item"><a href="/">Sectors</a></li>
+        <li class="nav-item"><a href="/">Sectors</a>
+          <!-- <ul>
+            <li><a href="">Arts and Culture</a></li>
+            <li><a href="">Business</a></li>
+            <li><a href="">Health and Wellness</a></li>
+            <li><a href="">ICT</a></li>
+          </ul> -->
+        </li>
         <li class="nav-item"><a href="/">Our Team</a></li>
         <li class="nav-item"><a href="/">Events</a></li>
         <li class="nav-item"><a href="/">Contact</a></li>
@@ -34,6 +46,7 @@
       <img src="images/icons/sun-1.svg" alt="Dark Mode Toggle" class="dark-mode-icon" id="darkModeIcon">
     </button>
   </nav>
+  <div class="menu-background" id="menuBackground"></div>
   <div>
     <div class="bg-light first-section">
       <div class="container">
@@ -118,6 +131,7 @@
       <a href="" class="footer-icon"><img src="images/icons/linkedin.svg" alt="" class="linkedin-icon"></a>
     </div>
   </footer>
+  <script src="scripts.js"></script>
 </body>
 
 </html>
