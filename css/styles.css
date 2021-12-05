@@ -20,6 +20,7 @@
   --ict-card-4-gradient: linear-gradient(90deg, rgba(239, 249, 218, 0.28) 0%, rgba(5, 68, 94, 0.12) 100%);
   --modal-color: rgba(116, 144, 160, 0.6);
   --drop-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
+  --filter-drop-shadow: drop-shadow(0px 8px 30px rgba(0, 0, 0, 0.2));
   --hover-filter: brightness(0.6);
   --wave-filter: invert(88%) sepia(7%) saturate(1093%) hue-rotate(185deg) brightness(103%) contrast(104%);
   --icon-filter: invert(4%) sepia(92%) saturate(5212%) hue-rotate(240deg) brightness(66%) contrast(101%);
@@ -43,8 +44,9 @@
   --business-card-4-gradient: linear-gradient(90deg, rgba(249, 216, 214, 0.28) 0%, rgba(29, 45, 80, 1) 100%);
   --health-and-wellness-card-4-gradient: linear-gradient(90deg, rgba(249, 235, 223, 0.28) 0%, rgba(29, 45, 80, 1) 100%);
   --ict-card-4-gradient: linear-gradient(90deg, rgba(239, 249, 218, 0.28) 0%, rgba(29, 45, 80, 1) 100%);
-  --modal-color: rgba(11, 21, 42, 0.6);
+  --modal-color: rgba(83, 96, 126, 0.6);
   --drop-shadow: 0px 8px 30px rgba(255, 255, 255, 0.12);
+  --filter-drop-shadow: drop-shadow(0px 8px 30px rgba(255, 255, 255, 0.2));
   --hover-filter: brightness(1.4);
   --wave-filter: invert(7%) sepia(22%) saturate(6507%) hue-rotate(223deg) brightness(94%) contrast(108%);
   --icon-filter: invert(83%) sepia(5%) saturate(1256%) hue-rotate(183deg) brightness(110%) contrast(102%);
@@ -53,6 +55,7 @@
 /* General Styles */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 * {
@@ -271,7 +274,7 @@ a {
 }
 
 .question-icon:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 
 .requirement-question-button {
@@ -426,7 +429,7 @@ a {
 
 .nav-logo {
   width: 60px;
-  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+  filter: var(--filter-drop-shadow);
 }
 
 .nav-title {

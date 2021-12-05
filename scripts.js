@@ -84,26 +84,3 @@ darkModeToggle.addEventListener('click', () => {
     disableDarkMode();
   }
 });
-
-var compulsoryCertificationsModal = document.getElementById("compulsoryCertificationsModal");
-var compulsoryCertificationsButton = document.getElementById("compulsoryCertificationsButton");
-var compulsoryCertificationsCloseButton = document.getElementById("compulsoryCertificationsCloseButton");
-
-compulsoryCertificationsButton.onclick = function () {
-  compulsoryCertificationsModal.style.visibility = "visible";
-  compulsoryCertificationsModal.style.opacity = "1";
-}
-
-compulsoryCertificationsCloseButton.onclick = function () {
-  compulsoryCertificationsModal.style.opacity = "0";
-  setTimeout(function () {
-    compulsoryCertificationsModal.style.visibility = "hidden";
-  }, 200);
-}
-
-window.onclick = function (event) {
-  if (event.target == compulsoryCertificationsModal) {
-    compulsoryCertificationsModal.style.visibility = "hidden";
-    compulsoryCertificationsModal.style.opacity = "0";
-  }
-}

@@ -44,7 +44,7 @@
         </div>
       </div>
       <ul class="nav-items" id="navItems">
-        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="index.html">Home</a></li>
         <li class="nav-item"><a href="join-us">Join Us</a></li>
         <li class="nav-item dropdown">
           <p class="current-page">Sectors</p>
@@ -140,7 +140,7 @@
           </div>
         </div>
         <div class="requirement-card">
-          <button class="requirement-question-button">
+          <button class="requirement-question-button" id="electiveCertificationsButton">
             <img src="images/icons/message-question.svg" alt="Requirement Icon Check" class="question-icon icon">
           </button>
           <h3 class="requirement-header">Elective Certifications (3)</h3>
@@ -191,15 +191,26 @@
             </div>
           </div>
         </div>
+        <div class="modal" id="electiveCertificationsModal">
+          <div class="modal-content">
+            <button class="close-model-button" id="electiveCertificationsCloseButton">
+              <img src="images/icons/close-circle.svg" alt="Close Modal Icon" class="close-modal-icon icon">
+            </button>
+            <h4 class="modal-title">What are elective certifications?</h4>
+            <p class="description modal-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Exercitationem veritatis ipsa voluptate accusantium earum sint enim, ipsam accusamus quas at dolores
+              nesciunt officia quo fugiat, dolorem quia a in aliquam?</p>
+          </div>
+        </div>
         <div class="requirement-card">
-          <button class="requirement-question-button">
+          <button class="requirement-question-button" id="reachAheadsButton">
             <img src="images/icons/message-question.svg" alt="Requirement Icon Check" class="question-icon icon">
           </button>
-          <h3 class="requirement-header">Reach Ahead (Minimum 2)</h3>
+          <h3 class="requirement-header">Reach Aheads (Minimum 2)</h3>
           <div class="requirements-3">
             <div class="requirement">
               <img src="images/icons/tick-circle.svg" alt="SHSM Requirement Check" class="requirement-check icon">
-              <p class="requirement-name">Reach Ahead (Minimum 2)</p>
+              <p class="requirement-name">Glass Masks Studio</p>
             </div>
             <div class="requirement">
               <img src="images/icons/tick-circle.svg" alt="SHSM Requirement Check" class="requirement-check icon">
@@ -231,8 +242,19 @@
             </div>
           </div>
         </div>
+        <div class="modal" id="reachAheadsModal">
+          <div class="modal-content">
+            <button class="close-model-button" id="reachAheadsCloseButton">
+              <img src="images/icons/close-circle.svg" alt="Close Modal Icon" class="close-modal-icon icon">
+            </button>
+            <h4 class="modal-title">What are reach aheads?</h4>
+            <p class="description modal-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Exercitationem veritatis ipsa voluptate accusantium earum sint enim, ipsam accusamus quas at dolores
+              nesciunt officia quo fugiat, dolorem quia a in aliquam?</p>
+          </div>
+        </div>
         <div class="requirement-card">
-          <button class="requirement-question-button">
+          <button class="requirement-question-button" id="experientialLearningsButton">
             <img src="images/icons/message-question.svg" alt="Requirement Icon Check" class="question-icon icon">
           </button>
           <h3 class="requirement-header">Experiential Learning Field Trips (Minimum 2)</h3>
@@ -271,8 +293,19 @@
             </div>
           </div>
         </div>
+        <div class="modal" id="experientialLearningsModal">
+          <div class="modal-content">
+            <button class="close-model-button" id="experientialLearningsCloseButton">
+              <img src="images/icons/close-circle.svg" alt="Close Modal Icon" class="close-modal-icon icon">
+            </button>
+            <h4 class="modal-title">What are experiential learnings?</h4>
+            <p class="description modal-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Exercitationem veritatis ipsa voluptate accusantium earum sint enim, ipsam accusamus quas at dolores
+              nesciunt officia quo fugiat, dolorem quia a in aliquam?</p>
+          </div>
+        </div>
         <div class="requirement-card">
-          <button class="requirement-question-button">
+          <button class="requirement-question-button" id="SPEButton">
             <img src="images/icons/message-question.svg" alt="Requirement Icon Check" class="question-icon icon">
           </button>
           <h3 class="requirement-header">Sector Partnered Event (1 out of 3)</h3>
@@ -291,8 +324,19 @@
             </div>
           </div>
         </div>
+        <div class="modal" id="SPEModal">
+          <div class="modal-content">
+            <button class="close-model-button" id="SPECloseButton">
+              <img src="images/icons/close-circle.svg" alt="Close Modal Icon" class="close-modal-icon icon">
+            </button>
+            <h4 class="modal-title">What are sector partnered events?</h4>
+            <p class="description modal-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Exercitationem veritatis ipsa voluptate accusantium earum sint enim, ipsam accusamus quas at dolores
+              nesciunt officia quo fugiat, dolorem quia a in aliquam?</p>
+          </div>
+        </div>
         <div class="requirement-card">
-          <button class="requirement-question-button">
+          <button class="requirement-question-button" id="coopPlacementsButton">
             <img src="images/icons/message-question.svg" alt="Requirement Icon Check" class="question-icon icon">
           </button>
           <h3 class="requirement-header">CO-OP Placements</h3>
@@ -355,13 +399,24 @@
             </div>
           </div>
         </div>
+        <div class="modal" id="coopPlacementsModal">
+          <div class="modal-content">
+            <button class="close-model-button" id="coopPlacementsCloseButton">
+              <img src="images/icons/close-circle.svg" alt="Close Modal Icon" class="close-modal-icon icon">
+            </button>
+            <h4 class="modal-title">What are CO-OP placements?</h4>
+            <p class="description modal-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Exercitationem veritatis ipsa voluptate accusantium earum sint enim, ipsam accusamus quas at dolores
+              nesciunt officia quo fugiat, dolorem quia a in aliquam?</p>
+          </div>
+        </div>
       </div>
     </section>
     <section class="bg-dark">
       <div class="container">
         <h2 class="section-title">Course Requirements</h2>
         <div class="requirement-card">
-          <button class="requirement-question-button">
+          <button class="requirement-question-button" id="majorCreditsButton">
             <img src="images/icons/message-question.svg" alt="Requirement Icon Check" class="question-icon icon">
           </button>
           <h3 class="requirement-header">Major Credits (Minimum 4)</h3>
@@ -464,8 +519,19 @@
             </div>
           </div>
         </div>
+        <div class="modal" id="majorCreditsModal">
+          <div class="modal-content">
+            <button class="close-model-button" id="majorCreditsCloseButton">
+              <img src="images/icons/close-circle.svg" alt="Close Modal Icon" class="close-modal-icon icon">
+            </button>
+            <h4 class="modal-title">What are major credits?</h4>
+            <p class="description modal-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Exercitationem veritatis ipsa voluptate accusantium earum sint enim, ipsam accusamus quas at dolores
+              nesciunt officia quo fugiat, dolorem quia a in aliquam?</p>
+          </div>
+        </div>
         <div class="requirement-card">
-          <button class="requirement-question-button">
+          <button class="requirement-question-button" id="requiredEnglishButton">
             <img src="images/icons/message-question.svg" alt="Requirement Icon Check" class="question-icon icon">
           </button>
           <h3 class="requirement-header">Required English (Minimum 1)</h3>
@@ -484,8 +550,19 @@
             </div>
           </div>
         </div>
+        <div class="modal" id="requiredEnglishModal">
+          <div class="modal-content">
+            <button class="close-model-button" id="requiredEnglishCloseButton">
+              <img src="images/icons/close-circle.svg" alt="Close Modal Icon" class="close-modal-icon icon">
+            </button>
+            <h4 class="modal-title">What is required English?</h4>
+            <p class="description modal-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Exercitationem veritatis ipsa voluptate accusantium earum sint enim, ipsam accusamus quas at dolores
+              nesciunt officia quo fugiat, dolorem quia a in aliquam?</p>
+          </div>
+        </div>
         <div class="requirement-card">
-          <button class="requirement-question-button">
+          <button class="requirement-question-button" id="relatedCreditsButton">
             <img src="images/icons/message-question.svg" alt="Requirement Icon Check" class="question-icon icon">
           </button>
           <h3 class="requirement-header">Related Credits (Minimum 1)</h3>
@@ -580,6 +657,17 @@
             </div>
           </div>
         </div>
+        <div class="modal" id="relatedCreditsModal">
+          <div class="modal-content">
+            <button class="close-model-button" id="relatedCreditsCloseButton">
+              <img src="images/icons/close-circle.svg" alt="Close Modal Icon" class="close-modal-icon icon">
+            </button>
+            <h4 class="modal-title">What are related credits?</h4>
+            <p class="description modal-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Exercitationem veritatis ipsa voluptate accusantium earum sint enim, ipsam accusamus quas at dolores
+              nesciunt officia quo fugiat, dolorem quia a in aliquam?</p>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -600,6 +688,7 @@
     </div>
   </footer>
   <script src="scripts.js"></script>
+  <script src="models.js"></script>
 </body>
 
 </html>
