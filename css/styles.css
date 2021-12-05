@@ -82,7 +82,7 @@ a {
 }
 
 .header {
-  min-height: 400px;
+  min-height: 450px;
 }
 
 .header-text {
@@ -135,6 +135,7 @@ a {
   font-family: "Philosopher", sans-serif;
   font-size: 1.25rem;
   color: var(--secondary-color);
+  line-height: 1.2;
 }
 
 .icon {
@@ -242,7 +243,7 @@ a {
 
 .requirements-3 {
   display: grid;
-  grid-template-columns: 34% 37% 29%;
+  grid-template-columns: 37% 31% 32%;
   gap: 20px;
 }
 
@@ -381,7 +382,7 @@ a {
 .btn-main,
 .btn-sub {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 16px 30px;
   border-radius: 10px;
   font-family: 'Philosopher', sans-serif;
   font-weight: 700;
