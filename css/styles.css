@@ -117,7 +117,7 @@ a {
   box-shadow: var(--drop-shadow);
   border-radius: 15px;
   width: 100%;
-  padding: 30px 35px 50px;
+  padding: 40px 35px 50px;
   transition: transform .2s ease-in-out;
 }
 
@@ -126,9 +126,9 @@ a {
 }
 
 .card-icon {
-  height: 80px;
-  width: 80px;
-  margin-bottom: 20px;
+  height: 60px;
+  width: 60px;
+  margin-bottom: 28px;
 }
 
 .card-text {
@@ -201,7 +201,7 @@ a {
 
 .sector-button {
   background-color: var(--highlight-color);
-  padding: 10px;
+  padding: 12px;
   border-radius: 30px;
   position: absolute;
   right: -10px;
@@ -209,7 +209,7 @@ a {
 }
 
 .sector-icon {
-  width: 30px;
+  width: 28px;
 }
 
 /* Sectors */
@@ -655,7 +655,8 @@ a {
 }
 
 .icon-size {
-  width: 1.75rem;
+  width: 1.5rem;
+  filter: invert(4%) sepia(92%) saturate(5212%) hue-rotate(240deg) brightness(66%) contrast(101%);
 }
 
 .linkedin-icon {
@@ -899,7 +900,7 @@ a {
   }
 
   .dark-mode-icon {
-    width: 30px;
+    width: 24px;
   }
 
   .bg-light,
