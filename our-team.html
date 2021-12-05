@@ -26,6 +26,7 @@
   <link rel="canonical" href="https://www.shsmpeths.ca/">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="icon" href="images/logo.png">
 </head>
 
@@ -44,7 +45,7 @@
         </div>
       </div>
       <ul class="nav-items" id="navItems">
-        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="/" class="current-page">Home</a></li>
         <li class="nav-item"><a href="join-us">Join Us</a></li>
         <li class="nav-item dropdown">
           <p>Sectors</p>
@@ -55,7 +56,7 @@
             <li class="dropdown-item"><a href="ict">ICT</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a href="our-team" class="current-page">Our Team</a></li>
+        <li class="nav-item"><a href="our-team">Our Team</a></li>
         <li class="nav-item"><a href="events">Events</a></li>
         <li class="nav-item"><a href="contact">Contact</a></li>
       </ul>
@@ -71,11 +72,14 @@
       <div class="container">
         <header class="header">
           <div class="header-text">
-            <p class="intro-phrase">Nice to meet you! Here is:</p>
-            <h1 class="title">Our Team.</h1>
-            <p class="description">Hi there! We are the individuals behind SHSM this year! Our responsibilities include
-              running events and creating the best possible experience for you!</p>
-            <a href="contact" class="btn-main">Contact Us!</a>
+            <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-once="true">
+              <p class="intro-phrase">Nice to meet you! Here is:</p>
+              <h1 class="title">Our Team.</h1>
+              <p class="description">Hi there! We are the individuals behind SHSM this year! Our responsibilities
+                include
+                running events and creating the best possible experience for you!</p>
+              <a href="contact" class="btn-main">Contact Us!</a>
+            </div>
           </div>
         </header>
       </div>
@@ -123,6 +127,10 @@
     </div>
   </footer>
   <script src="scripts.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

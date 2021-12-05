@@ -186,24 +186,27 @@ var requiredMathModal = document.getElementById("requiredMathModal");
 var requiredMathButton = document.getElementById("requiredMathButton");
 var requiredMathCloseButton = document.getElementById("requiredMathCloseButton");
 
-requiredMathButton.onclick = function () {
-  requiredMathModal.style.visibility = "visible";
-  requiredMathModal.style.opacity = "1";
-}
+if (requiredMathButton != null) {
+  requiredMathButton.onclick = function () {
+    requiredMathModal.style.visibility = "visible";
+    requiredMathModal.style.opacity = "1";
+  }
 
-requiredMathCloseButton.onclick = function () {
-  requiredMathModal.style.opacity = "0";
-  setTimeout(function () {
-    requiredMathModal.style.visibility = "hidden";
-  }, 200);
-}
-
-window.onclick = function (event) {
-  if (event.target == requiredMathModal) {
-    requiredMathModal.style.visibility = "hidden";
+  requiredMathCloseButton.onclick = function () {
     requiredMathModal.style.opacity = "0";
+    setTimeout(function () {
+      requiredMathModal.style.visibility = "hidden";
+    }, 200);
+  }
+
+  window.onclick = function (event) {
+    if (event.target == requiredMathModal) {
+      requiredMathModal.style.visibility = "hidden";
+      requiredMathModal.style.opacity = "0";
+    }
   }
 }
+
 
 var relatedCreditsModal = document.getElementById("relatedCreditsModal");
 var relatedCreditsButton = document.getElementById("relatedCreditsButton");

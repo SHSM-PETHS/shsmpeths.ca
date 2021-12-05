@@ -26,6 +26,7 @@
   <link rel="canonical" href="https://www.shsmpeths.ca/">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="icon" href="images/logo.png">
 </head>
 
@@ -71,18 +72,22 @@
       <div class="container">
         <header class="header">
           <div class="header-text">
-            <p class="intro-phrase">Hello again!</p>
-            <h1 class="title">Join SHSM.</h1>
-            <p class="description">Awesome! To make the process a bit easier, we have organized 5 easy steps!
-              Still not sure about your sector? Click on the button below to research some more!</p>
-            <a href="/#sectors" class="btn-main">Our Sectors</a>
+            <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-once="true">
+              <p class="intro-phrase">Hello again!</p>
+              <h1 class="title">Join SHSM.</h1>
+              <p class="description">Awesome! To make the process a bit easier, we have organized 5 easy steps!
+                Still not sure about your sector? Click on the button below to research some more!</p>
+              <a href="/#sectors" class="btn-main">Our Sectors</a>
+            </div>
           </div>
         </header>
       </div>
     </section>
     <section class="bg-dark">
       <div class="container">
-        <h2 class="section-title">Steps</h2>
+        <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-once="true">
+          <h2 class="section-title">Steps</h2>
+        </div>
       </div>
     </section>
   </div>
@@ -103,6 +108,10 @@
     </div>
   </footer>
   <script src="scripts.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

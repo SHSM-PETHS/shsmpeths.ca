@@ -44,10 +44,8 @@ document.addEventListener('click', function (e) {
     dropdownOpen = true;
   } else {
     dropdownItems.classList.remove('open-dropdown');
-    console.log('removed');
     dropdownOpen = false;
   }
-  console.log(dropdownOpen);
 });
 
 let darkMode = localStorage.getItem('darkMode');
