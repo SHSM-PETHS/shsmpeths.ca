@@ -340,6 +340,11 @@ a {
   cursor: pointer;
 }
 
+/* Our Team */
+.team-title {
+  margin-bottom: 50px !important;
+}
+
 /* Text */
 .title,
 .section-title {
