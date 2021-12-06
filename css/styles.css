@@ -18,6 +18,11 @@
   --business-card-4-gradient: linear-gradient(90deg, rgba(249, 216, 214, 0.28) 0%, rgba(5, 68, 94, 0.12) 100%);
   --health-and-wellness-card-4-gradient: linear-gradient(90deg, rgba(249, 235, 223, 0.28) 0%, rgba(5, 68, 94, 0.12) 100%);
   --ict-card-4-gradient: linear-gradient(90deg, rgba(239, 249, 218, 0.28) 0%, rgba(5, 68, 94, 0.12) 100%);
+  --chair-gradient: linear-gradient(0deg, #DDEDF9 0%, rgba(237, 246, 252, 0) 100%);
+  --arts-and-culture-gradient: linear-gradient(0deg, #EAE0FF 0%, rgba(237, 246, 252, 0) 100%);
+  --business-gradient: linear-gradient(0deg, #FFEEE0 0%, rgba(237, 246, 252, 0) 100%);
+  --health-and-wellness-gradient: linear-gradient(0deg, #FFE1DF 0%, rgba(237, 246, 252, 0) 100%);
+  --ict-gradient: linear-gradient(0deg, #F7FFD7 0%, rgba(237, 246, 252, 0) 100%);
   --modal-color: rgba(116, 144, 160, 0.6);
   --drop-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
   --filter-drop-shadow: drop-shadow(0px 8px 30px rgba(0, 0, 0, 0.2));
@@ -44,6 +49,11 @@
   --business-card-4-gradient: linear-gradient(90deg, rgba(249, 216, 214, 0.28) 0%, rgba(29, 45, 80, 1) 100%);
   --health-and-wellness-card-4-gradient: linear-gradient(90deg, rgba(249, 235, 223, 0.28) 0%, rgba(29, 45, 80, 1) 100%);
   --ict-card-4-gradient: linear-gradient(90deg, rgba(239, 249, 218, 0.28) 0%, rgba(29, 45, 80, 1) 100%);
+  --chair-gradient: linear-gradient(0deg, #142850 0%, rgba(237, 246, 252, 0) 100%);
+  --arts-and-culture-gradient: linear-gradient(0deg, #463966 0%, rgba(237, 246, 252, 0) 100%);
+  --business-gradient: linear-gradient(0deg, #685340 0%, rgba(237, 246, 252, 0) 100%);
+  --health-and-wellness-gradient: linear-gradient(0deg, #693e3b 0%, rgba(237, 246, 252, 0) 100%);
+  --ict-gradient: linear-gradient(0deg, #515833 0%, rgba(237, 246, 252, 0) 100%);
   --modal-color: rgba(83, 96, 126, 0.6);
   --drop-shadow: 0px 8px 30px rgba(255, 255, 255, 0.12);
   --filter-drop-shadow: drop-shadow(0px 8px 30px rgba(255, 255, 255, 0.2));
@@ -104,6 +114,12 @@ a {
 
 .first-section {
   padding-top: 60px;
+}
+
+.col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
 }
 
 .col-3 {
@@ -341,8 +357,67 @@ a {
 }
 
 /* Our Team */
+.team-card {
+  width: auto;
+  position: auto;
+  filter: var(--filter-drop-shadow);
+  transition: transform .2s ease-in-out;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+}
+
 .team-title {
   margin-bottom: 50px !important;
+}
+
+.council-member {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.member-name {
+  position: absolute;
+  bottom: 30px;
+  font-family: "Philosopher", sans-serif;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.75rem;
+  text-align: center;
+  margin: 0px auto;
+  left: 0;
+  right: 0;
+}
+
+.gradient {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 40%;
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+.chair-gradient {
+  background: var(--chair-gradient);
+}
+
+.arts-and-culture-gradient {
+  background: var(--arts-and-culture-gradient);
+}
+
+.business-gradient {
+  background: var(--business-gradient);
+}
+
+.health-and-wellness-gradient {
+  background: var(--health-and-wellness-gradient);
+}
+
+.ict-gradient {
+  background: var(--ict-gradient);
 }
 
 /* Text */
@@ -767,6 +842,10 @@ a {
     gap: 25px;
   }
 
+  .col-2 {
+    gap: 40px;
+  }
+
   .header-text {
     min-width: 100%;
   }
@@ -829,6 +908,10 @@ a {
 }
 
 @media only screen and (max-width: 576px) {
+  .col-2 {
+    grid-template-columns: 1fr;
+  }
+
   .col-3 {
     grid-template-columns: 1fr;
   }
