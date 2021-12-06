@@ -207,7 +207,6 @@ if (requiredMathButton != null) {
   }
 }
 
-
 var relatedCreditsModal = document.getElementById("relatedCreditsModal");
 var relatedCreditsButton = document.getElementById("relatedCreditsButton");
 var relatedCreditsCloseButton = document.getElementById("relatedCreditsCloseButton");

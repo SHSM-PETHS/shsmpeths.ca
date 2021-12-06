@@ -86,9 +86,45 @@
     </section>
     <section class="bg-dark">
       <div class="container">
-        <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-once="true">
-          <div class="event-card">
-            <h3 class="event-title">Acting and Auditioning</h3>
+        <div class="col-3">
+          <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-once="true"
+            data-aos-offset="50">
+            <div class="event-card">
+              <img src="images/events/actingandauditioning1.png" alt="" class="event-image">
+              <div class="gradient event-gradient"></div>
+              <button class="event-expand">
+                <img src="images/icons/maximize-4.svg" alt="" class="maximize-button">
+              </button>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="150" data-aos-easing="ease-in-out" data-aos-duration="600"
+            data-aos-once="true" data-aos-offset="50">
+            <div class="event-card">
+              <img src="images/events/actingandauditioning1.png" alt="" class="event-image">
+              <div class="gradient event-gradient"></div>
+              <button class="event-expand">
+                <img src="images/icons/maximize-4.svg" alt="" class="maximize-button">
+              </button>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300" data-aos-easing="ease-in-out" data-aos-duration="600"
+            data-aos-once="true" data-aos-offset="50">
+            <div class="event-card">
+              <img src="images/events/actingandauditioning1.png" alt="" class="event-image">
+              <div class="gradient event-gradient"></div>
+              <button class="event-expand" id="event1Button">
+                <img src="images/icons/maximize-4.svg" alt="" class="maximize-button">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="event1Modal">
+          <div class="event-modal-content">
+            <button class="close-model-button" id="event1CloseButton">
+              <img src="images/icons/close-circle.svg" alt="Close Modal Icon" class="close-modal-icon icon">
+            </button>
+            <h4 class="modal-title">Acting and Auditioning</h4>
+            <p class="description modal-description">SHSM will be hosting an Acting and Auditioning event on Wednesday December 8 at 3:30pm. Join to learn more about the acting industry and improve your public speaking with actor Christina Collins. This event is open to all students, SHSM students will earn an experiential learning certification. Register through the Google forms posted on the grade Google Classrooms, and the SHSM Google Classroom, code: bb7sirw. Sign up soon as spaces are limited. See you there :)</p>
           </div>
         </div>
       </div>
@@ -111,6 +147,7 @@
     </div>
   </footer>
   <script src="scripts.js"></script>
+  <script src="event-modals.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
