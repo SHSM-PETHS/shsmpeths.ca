@@ -12,6 +12,9 @@
   --ict-color: #F7FFD7;
   --business-color: #FFEEE0;
   --health-and-wellness-color: #FFE1DF;
+  --experiential-learning-color: #DFFFE4;
+  --reach-ahead-color: #DFF4FF;
+  --application-color: #FFDFF2;
   --bg-dark-gradient: linear-gradient(90deg, #DCECF8 0%, rgba(220, 236, 248, 0) 100%);
   --card-3-gradient: linear-gradient(90deg, #DDEDF9 0%, #EDF6FC 100%);
   --arts-and-culture-card-4-gradient: linear-gradient(90deg, rgba(214, 205, 234, 0.28) 0%, rgba(5, 68, 94, 0.12) 100%);
@@ -44,6 +47,9 @@
   --ict-color: #D0DC9F;
   --business-color: #CAB09A;
   --health-and-wellness-color: #D2A7A5;
+  --experiential-learning-color: #DFFFE4;
+  --reach-ahead-color: #DFF4FF;
+  --application-color: #FFDFF2;
   --bg-dark-gradient: linear-gradient(90deg, #1D2D50 0%, rgba(29, 45, 80, 0) 100%);
   --card-3-gradient: linear-gradient(90deg, #1D2D50 0%, rgba(29, 45, 80, 0) 100%);
   --arts-and-culture-card-4-gradient: linear-gradient(90deg, rgba(214, 205, 234, 0.28) 0%, rgba(29, 45, 80, 1) 100%);
@@ -425,9 +431,9 @@ a {
 /* Events */
 .event-card {
   width: auto;
-  height: 100%;
   filter: var(--filter-drop-shadow);
   transition: transform .2s ease-in-out;
+  position: relative;
 }
 
 .event-card:hover {
@@ -437,14 +443,13 @@ a {
 .event-image {
   max-width: 100%;
   border-radius: 16px;
-  height: 100%;
 }
 
 .maximize-button {
-  width: 40px;
   position: absolute;
-  bottom: 30px;
-  right: 30px;
+  width: 40px;
+  bottom: 50px;
+  right: 40px;
   transition: transform .2s ease-in-out;
   filter: var(--icon-filter);
 }
@@ -454,7 +459,12 @@ a {
 }
 
 .event-gradient {
-  height: 80% !important;
+  position: absolute;
+  left: 0px;
+  bottom: 19px;
+  width: 100%;
+  height: 60%;
+  border-radius: 15px;
   background: var(--event-gradient);
 }
 
@@ -472,6 +482,78 @@ a {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.event-modal-description {
+  margin-bottom: 30px !important;
+}
+
+.event-info {
+  font-family: "Mulish", sans-serif;
+  color: var(--primary-color);
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.event-info-cards {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.event-info-cards:last-of-type {
+  margin-bottom: 0px;
+}
+
+.event-info-card {
+  margin-right: 15px;
+  background: var(--event-gradient);
+  border-radius: 8px;
+  box-shadow: var(--drop-shadow);
+  display: flex;
+  padding: 15px 20px;
+  transition: transform .2s ease-in-out;
+}
+
+.event-info-card:hover {
+  transform: scale(1.02);
+}
+
+.event-info-value {
+  font-family: "Philosopher", sans-serif;
+  color: var(--primary-color);
+  font-size: 1.375rem;
+  font-weight: 700;
+  align-self: center;
+}
+
+.event-info-icon-image {
+  width: 20px;
+}
+
+.event-info-icon {
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.experiential-learning-icon {}
+
+.arts-and-culture-icon {
+  background-color: var(--arts-and-culture-color);
+}
+
+.business-icon {
+  background-color: var(--business-color);
+}
+
+.health-and-wellness-icon {
+  background-color: var(--health-and-wellness-color);
+}
+
+.ict-icon {
+  background-color: var(--ict-color);
 }
 
 /* Text */
@@ -554,12 +636,13 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
+  z-index: 1;
 }
 
 .nav-brand {
   display: flex;
   align-items: center;
+  transition: opacity .2s ease-in-out;
 }
 
 .nav-logo {
@@ -619,6 +702,10 @@ a {
 
 .dropdown:hover .dropdown-items {
   visibility: visible;
+}
+
+.dropdown-link {
+  cursor: pointer;
 }
 
 .dropdown-item {
@@ -794,9 +881,18 @@ a {
   filter: invert(4%) sepia(92%) saturate(5212%) hue-rotate(240deg) brightness(66%) contrast(101%);
 }
 
+.instagram-icon {
+  filter: invert(10%) sepia(73%) saturate(5648%) hue-rotate(0deg) brightness(92%) contrast(105%);
+}
+
+.classroom-icon {
+  filter: invert(48%) sepia(89%) saturate(2818%) hue-rotate(87deg) brightness(92%) contrast(102%);
+}
+
 .linkedin-icon {
   width: 1.25rem;
   margin: 0.25rem;
+  filter: invert(17%) sepia(97%) saturate(3062%) hue-rotate(185deg) brightness(103%) contrast(101%);
 }
 
 @media only screen and (max-width: 1466px) {
@@ -844,6 +940,10 @@ a {
 
   .modal-content {
     width: 70%;
+  }
+
+  .event-modal-content {
+    width: 85%;
   }
 }
 
@@ -958,6 +1058,10 @@ a {
   .modal-content {
     padding: 80px 30px 50px;
     width: 80%;
+  }
+
+  .event-modal-content {
+    width: 90%;
   }
 }
 

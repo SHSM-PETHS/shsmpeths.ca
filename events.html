@@ -34,7 +34,7 @@
   <nav class="navbar">
     <div class="navigation">
       <a href="/">
-        <div class="nav-brand">
+        <div class="nav-brand" id="navBrand">
           <img src="images/logo.png" alt="SHSM Logo" class="nav-logo">
           <h3 class="nav-title">SHSM <span class="nav-title-light">PETHS</span></h3>
         </div>
@@ -48,7 +48,7 @@
         <li class="nav-item"><a href="/">Home</a></li>
         <li class="nav-item"><a href="join-us">Join Us</a></li>
         <li class="nav-item dropdown">
-          <p>Sectors</p>
+          <p class="dropdown-link">Sectors</p>
           <ul class="dropdown-items">
             <li class="dropdown-item"><a href="arts-and-culture">Arts and Culture</a></li>
             <li class="dropdown-item"><a href="business">Business</a></li>
@@ -87,12 +87,12 @@
     <section class="bg-dark">
       <div class="container">
         <div class="col-3">
-          <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-once="true"
-            data-aos-offset="50">
+          <div data-aos="fade-up" data-aos-delay="0" data-aos-easing="ease-in-out" data-aos-duration="600"
+            data-aos-once="true" data-aos-offset="50">
             <div class="event-card">
-              <img src="images/events/actingandauditioning1.png" alt="" class="event-image">
-              <div class="gradient event-gradient"></div>
-              <button class="event-expand">
+              <img src="images/events/actingandauditioning.png" alt="" class="event-image">
+              <div class="event-gradient"></div>
+              <button class="event-expand" id="event5Button">
                 <img src="images/icons/maximize-4.svg" alt="" class="maximize-button">
               </button>
             </div>
@@ -100,9 +100,9 @@
           <div data-aos="fade-up" data-aos-delay="150" data-aos-easing="ease-in-out" data-aos-duration="600"
             data-aos-once="true" data-aos-offset="50">
             <div class="event-card">
-              <img src="images/events/actingandauditioning1.png" alt="" class="event-image">
-              <div class="gradient event-gradient"></div>
-              <button class="event-expand">
+              <img src="images/events/coachespanel.png" alt="" class="event-image">
+              <div class="event-gradient"></div>
+              <button class="event-expand" id="event4Button">
                 <img src="images/icons/maximize-4.svg" alt="" class="maximize-button">
               </button>
             </div>
@@ -110,12 +110,84 @@
           <div data-aos="fade-up" data-aos-delay="300" data-aos-easing="ease-in-out" data-aos-duration="600"
             data-aos-once="true" data-aos-offset="50">
             <div class="event-card">
-              <img src="images/events/actingandauditioning1.png" alt="" class="event-image">
-              <div class="gradient event-gradient"></div>
+              <img src="images/events/universitypanel.png" alt="" class="event-image">
+              <div class="event-gradient"></div>
+              <button class="event-expand" id="event3Button">
+                <img src="images/icons/maximize-4.svg" alt="" class="maximize-button">
+              </button>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="0" data-aos-easing="ease-in-out" data-aos-duration="600"
+            data-aos-once="true" data-aos-offset="50">
+            <div class="event-card">
+              <img src="images/events/infomeeting.jpg" alt="" class="event-image">
+              <div class="event-gradient"></div>
+              <button class="event-expand" id="event2Button">
+                <img src="images/icons/maximize-4.svg" alt="" class="maximize-button">
+              </button>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="150" data-aos-easing="ease-in-out" data-aos-duration="600"
+            data-aos-once="true" data-aos-offset="50">
+            <div class="event-card">
+              <img src="images/events/artsandculturerecruitment.png" alt="" class="event-image">
+              <div class="event-gradient"></div>
               <button class="event-expand" id="event1Button">
                 <img src="images/icons/maximize-4.svg" alt="" class="maximize-button">
               </button>
             </div>
+          </div>
+        </div>
+        <div class="modal" id="event5Modal">
+          <div class="event-modal-content">
+            <button class="close-model-button" id="event5CloseButton">
+              <img src="images/icons/close-circle.svg" alt="Close Modal Icon" class="close-modal-icon icon">
+            </button>
+            <h4 class="modal-title">Acting and Auditioning</h4>
+            <p class="description modal-description">SHSM will be hosting an Acting and Auditioning event on Wednesday
+              December 8 at 3:30pm. Join to learn more about the acting industry and improve your public speaking with
+              actor Christina Collins. This event is open to all students, SHSM students will earn an experiential
+              learning certification. Register through the Google forms posted on the grade Google Classrooms, and the
+              SHSM Google Classroom, code: bb7sirw. Sign up soon as spaces are limited. See you there :)</p>
+          </div>
+        </div>
+        <div class="modal" id="event4Modal">
+          <div class="event-modal-content">
+            <button class="close-model-button" id="event4CloseButton">
+              <img src="images/icons/close-circle.svg" alt="Close Modal Icon" class="close-modal-icon icon">
+            </button>
+            <h4 class="modal-title">Acting and Auditioning</h4>
+            <p class="description modal-description">SHSM will be hosting an Acting and Auditioning event on Wednesday
+              December 8 at 3:30pm. Join to learn more about the acting industry and improve your public speaking with
+              actor Christina Collins. This event is open to all students, SHSM students will earn an experiential
+              learning certification. Register through the Google forms posted on the grade Google Classrooms, and the
+              SHSM Google Classroom, code: bb7sirw. Sign up soon as spaces are limited. See you there :)</p>
+          </div>
+        </div>
+        <div class="modal" id="event3Modal">
+          <div class="event-modal-content">
+            <button class="close-model-button" id="event3CloseButton">
+              <img src="images/icons/close-circle.svg" alt="Close Modal Icon" class="close-modal-icon icon">
+            </button>
+            <h4 class="modal-title">Acting and Auditioning</h4>
+            <p class="description modal-description">SHSM will be hosting an Acting and Auditioning event on Wednesday
+              December 8 at 3:30pm. Join to learn more about the acting industry and improve your public speaking with
+              actor Christina Collins. This event is open to all students, SHSM students will earn an experiential
+              learning certification. Register through the Google forms posted on the grade Google Classrooms, and the
+              SHSM Google Classroom, code: bb7sirw. Sign up soon as spaces are limited. See you there :)</p>
+          </div>
+        </div>
+        <div class="modal" id="event2Modal">
+          <div class="event-modal-content">
+            <button class="close-model-button" id="event2CloseButton">
+              <img src="images/icons/close-circle.svg" alt="Close Modal Icon" class="close-modal-icon icon">
+            </button>
+            <h4 class="modal-title">Acting and Auditioning</h4>
+            <p class="description modal-description">SHSM will be hosting an Acting and Auditioning event on Wednesday
+              December 8 at 3:30pm. Join to learn more about the acting industry and improve your public speaking with
+              actor Christina Collins. This event is open to all students, SHSM students will earn an experiential
+              learning certification. Register through the Google forms posted on the grade Google Classrooms, and the
+              SHSM Google Classroom, code: bb7sirw. Sign up soon as spaces are limited. See you there :)</p>
           </div>
         </div>
         <div class="modal" id="event1Modal">
@@ -124,7 +196,30 @@
               <img src="images/icons/close-circle.svg" alt="Close Modal Icon" class="close-modal-icon icon">
             </button>
             <h4 class="modal-title">Acting and Auditioning</h4>
-            <p class="description modal-description">SHSM will be hosting an Acting and Auditioning event on Wednesday December 8 at 3:30pm. Join to learn more about the acting industry and improve your public speaking with actor Christina Collins. This event is open to all students, SHSM students will earn an experiential learning certification. Register through the Google forms posted on the grade Google Classrooms, and the SHSM Google Classroom, code: bb7sirw. Sign up soon as spaces are limited. See you there :)</p>
+            <p class="description modal-description event-modal-description">SHSM will be hosting an Acting and
+              Auditioning event on Wednesday
+              December 8 at 3:30pm. Join to learn more about the acting industry and improve your public speaking with
+              actor Christina Collins. This event is open to all students, SHSM students will earn an experiential
+              learning certification. Register through the Google forms posted on the grade Google Classrooms, and the
+              SHSM Google Classroom, code: bb7sirw. Sign up soon as spaces are limited. See you there :)</p>
+            <h5 class="event-info">CERTIFICATION TYPE</h5>
+            <div class="event-info-cards">
+              <div class="event-info-card">
+                <div class="event-info-icon application-icon">
+                  <img src="" alt="">
+                </div>
+                <p class="event-info-value">Application</p>
+              </div>
+            </div>
+            <h5 class="event-info">SECTORS</h5>
+            <div class="event-info-cards">
+              <div class="event-info-card">
+                <div class="event-info-icon arts-and-culture-icon">
+                  <img src="images/icons/brush-2.svg" alt="" class="event-info-icon-image">
+                </div>
+                <p class="event-info-value">Arts and Culture</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -139,11 +234,11 @@
     </div>
     <div class="footer-icons">
       <a href="https://www.instagram.com/shsm.peths/" class="footer-icon" target="_blank"><img
-          src="images/icons/instagram.svg" alt="SHSM Instagram Icon" class="icon-size"></a>
+          src="images/icons/instagram.svg" alt="SHSM Instagram Icon" class="icon-size instagram-icon"></a>
       <a href="https://classroom.google.com/c/NDMyOTgwNjcw?cjc=bb7sirw" class="footer-icon" target="_blank"><img
-          src="images/icons/classroom.svg" alt="SHSM Google Classroom Icon" class="icon-size"></a>
+          src="images/icons/classroom.svg" alt="SHSM Google Classroom Icon" class="icon-size classroom-icon"></a>
       <a href="https://www.linkedin.com/company/shsm-trudeau/about/" class="footer-icon" target="_blank"><img
-          src="images/icons/linkedin.svg" alt="SHSM LinkedIn Icon" class="linkedin-icon icon-size"></a>
+          src="images/icons/linkedin.svg" alt="SHSM LinkedIn Icon" class="linkedin-icon"></a>
     </div>
   </footer>
   <script src="scripts.js"></script>
