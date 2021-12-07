@@ -657,6 +657,108 @@ a {
   transform: scale(1.05);
 }
 
+/* Join Us */
+.join-col {
+  display: grid;
+}
+
+.join-col:nth-of-type(2n - 1) {
+  grid-template-columns: 1fr 2fr;
+}
+
+.join-col:nth-of-type(2n) {
+  grid-template-columns: 2fr 1fr;
+}
+
+.steps-card {
+  background-image: var(--bg-dark-gradient);
+  width: 100%;
+  padding: 50px 50px 60px;
+  box-shadow: var(--drop-shadow);
+  border-radius: 15px;
+  margin-top: 60px;
+  transition: transform .2s ease-in-out;
+  position: relative;
+}
+
+.steps-card:hover {
+  transform: scale(1.05);
+}
+
+.steps-header {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.steps-description {
+  font-family: 'Mulish', sans-serif;
+  font-size: 1rem;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+
+.btn-steps {
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  display: inline-block;
+  padding: 14px 20px;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  transition: transform .2s ease-in-out;
+  margin-bottom: 0px;
+}
+
+.btn-steps:not(:first-child) {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-steps-last {
+  margin-bottom: 0px !important;
+}
+
+.btn-steps:hover {
+  transform: scale(1.05);
+}
+
+.step-number {
+  padding: 15px;
+  border-radius: 60px;
+  background-color: var(--bg-color);
+  position: absolute;
+  top: -20px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-number-left {
+  left: -20px;
+}
+
+.step-number-right {
+  right: -20px;
+}
+
+.step-number-text {
+  color: var(--primary-color);
+  font-family: 'Philosopher', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.no-button {
+  margin-bottom: 0px;
+}
+
 /* Navigation Bar */
 .navbar {
   margin: 50px auto 60px;
@@ -1065,6 +1167,14 @@ a {
   .footer {
     margin-top: 50px;
   }
+
+  .join-col:nth-of-type(2n - 1) {
+    grid-template-columns: 10% 90%;
+  }
+
+  .join-col:nth-of-type(2n) {
+    grid-template-columns: 90% 10%;
+  }
 }
 
 @media only screen and (max-width: 922px) {
@@ -1211,6 +1321,36 @@ a {
 
   .requirement-card {
     padding: 60px 30px 50px;
+  }
+
+  .steps-card {
+    padding: 30px 30px 35px;
+  }
+
+  .steps-header {
+    font-size: 1.75rem;
+  }
+
+  .join-col:nth-of-type(2n - 1) {
+    grid-template-columns: 0% 100%;
+  }
+
+  .join-col:nth-of-type(2n) {
+    grid-template-columns: 100% 0%;
+  }
+
+  .step-number {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .step-number-text {
+    font-size: 1.375rem;
+  }
+
+  .btn-steps {
+    font-size: 1.125rem;
   }
 }
 
