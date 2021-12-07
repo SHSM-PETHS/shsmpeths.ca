@@ -13,7 +13,8 @@
   --business-color: #FFEEE0;
   --health-and-wellness-color: #FFE1DF;
   --experiential-learning-color: #DFFFE4;
-  --reach-ahead-color: #DFF4FF;
+  --general-color: #E3E3E3;
+  --reach-ahead-color: #fff9df;
   --application-color: #FFDFF2;
   --bg-dark-gradient: linear-gradient(90deg, #DCECF8 0%, rgba(220, 236, 248, 0) 100%);
   --card-3-gradient: linear-gradient(90deg, #DDEDF9 0%, #EDF6FC 100%);
@@ -33,6 +34,7 @@
   --hover-filter: brightness(0.6);
   --wave-filter: invert(88%) sepia(7%) saturate(1093%) hue-rotate(185deg) brightness(103%) contrast(104%);
   --icon-filter: invert(4%) sepia(92%) saturate(5212%) hue-rotate(240deg) brightness(66%) contrast(101%);
+  --mode-icon-filter: invert(90%) sepia(3%) saturate(1635%) hue-rotate(189deg) brightness(105%) contrast(104%);
 }
 
 [data-theme="dark"] {
@@ -68,6 +70,7 @@
   --hover-filter: brightness(1.4);
   --wave-filter: invert(7%) sepia(22%) saturate(6507%) hue-rotate(223deg) brightness(94%) contrast(108%);
   --icon-filter: invert(83%) sepia(5%) saturate(1256%) hue-rotate(183deg) brightness(110%) contrast(102%);
+  --mode-icon-filter: invert(5%) sepia(98%) saturate(1701%) hue-rotate(224deg) brightness(94%) contrast(97%);
 }
 
 /* General Styles */
@@ -143,6 +146,7 @@ a {
   width: 100%;
   padding: 40px 35px 50px;
   transition: transform .2s ease-in-out;
+  height: 100%;
 }
 
 .card-3:hover {
@@ -326,7 +330,7 @@ a {
 
 .modal-content {
   position: absolute;
-  width: 50%;
+  width: 60%;
   background-color: var(--bg-color);
   padding: 80px 70px 80px;
   border-radius: 15px;
@@ -482,6 +486,8 @@ a {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  max-height: 85%;
+  overflow-y: auto;
 }
 
 .event-modal-description {
@@ -502,12 +508,9 @@ a {
   margin-bottom: 40px;
 }
 
-.event-info-cards:last-of-type {
-  margin-bottom: 0px;
-}
-
 .event-info-card {
-  margin-right: 15px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   background: var(--event-gradient);
   border-radius: 8px;
   box-shadow: var(--drop-shadow);
@@ -517,7 +520,7 @@ a {
 }
 
 .event-info-card:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
 .event-info-value {
@@ -538,7 +541,37 @@ a {
   margin-right: 15px;
 }
 
-.experiential-learning-icon {}
+.btn-events {
+  margin-right: 15px;
+  background: var(--card-3-gradient);
+  border-radius: 8px;
+  box-shadow: var(--drop-shadow);
+  padding: 15px 20px;
+  transition: transform .2s ease-in-out;
+  display: inline-block;
+  border: 2px solid var(--secondary-color);
+  cursor: pointer;
+}
+
+.btn-events:hover {
+  transform: scale(1.02);
+}
+
+.applications-icon {
+  background-color: var(--application-color);
+}
+
+.experiential-learning-icon {
+  background-color: var(--experiential-learning-color);
+}
+
+.general-icon {
+  background-color: var(--general-color);
+}
+
+.reach-ahead-icon {
+  background-color: var(--reach-ahead-color);
+}
 
 .arts-and-culture-icon {
   background-color: var(--arts-and-culture-color);
@@ -949,7 +982,17 @@ a {
 
 @media only screen and (max-width: 992px) {
   .dark-mode-toggle {
-    display: none;
+    padding: 10px 12px;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    border-radius: 60px;
+    background-color: var(--primary-color);
+  }
+
+  .dark-mode-icon {
+    margin-top: 2px;
+    filter: var(--mode-icon-filter);
   }
 
   .navbar {
@@ -987,10 +1030,6 @@ a {
     margin-bottom: 0px;
   }
 
-  .menu-background {
-    display: block;
-  }
-
   .col-3 {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
@@ -1002,10 +1041,6 @@ a {
 
   .header-text {
     min-width: 100%;
-  }
-
-  .dark-mode-toggle {
-    margin-right: 0.5vw;
   }
 
   .dropdown-items {
@@ -1163,8 +1198,9 @@ a {
     padding: 60px 0px 70px;
   }
 
-  .modal-content {
-    padding: 80px 30px 50px;
+  .modal-content,
+  .event-modal-content {
+    padding: 80px 35px 50px;
     width: 90%;
   }
 
@@ -1185,10 +1221,6 @@ a {
 
   .section-title {
     font-size: 2.625rem;
-  }
-
-  .dark-mode-toggle {
-    display: none;
   }
 
   .bg-light,

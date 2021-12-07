@@ -80,19 +80,29 @@ event5CloseButton.onclick = function () {
 
 window.onclick = function (event) {
   if (event.target == event5Modal) {
-    event5Modal.style.visibility = "hidden";
     event5Modal.style.opacity = "0";
+    setTimeout(function () {
+      event5Modal.style.visibility = "hidden";
+    }, 200);
   } else if (event.target == event4Modal) {
-    event4Modal.style.visibility = "hidden";
     event4Modal.style.opacity = "0";
+    setTimeout(function () {
+      event4Modal.style.visibility = "hidden";
+    }, 200);
   } else if (event.target == event3Modal) {
-    event3Modal.style.visibility = "hidden";
     event3Modal.style.opacity = "0";
+    setTimeout(function () {
+      event3Modal.style.visibility = "hidden";
+    }, 200);
   } else if (event.target == event2Modal) {
-    event2Modal.style.visibility = "hidden";
     event2Modal.style.opacity = "0";
+    setTimeout(function () {
+      event2Modal.style.visibility = "hidden";
+    }, 200);
   } else if (event.target == event1Modal) {
-    event1Modal.style.visibility = "hidden";
     event1Modal.style.opacity = "0";
+    setTimeout(function () {
+      event1Modal.style.visibility = "hidden";
+    }, 200);
   }
 }

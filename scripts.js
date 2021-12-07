@@ -12,6 +12,7 @@ menuBtn.addEventListener('click', () => {
     menuBtn.classList.add('open');
     navItems.classList.add('open-nav-items');
     background.classList.add('open-menu-background');
+    background.style.display = "block";
     body.classList.add('no-scrolling');
     menuOpen = true;
     navBrand.style.opacity = 0;;
@@ -19,6 +20,9 @@ menuBtn.addEventListener('click', () => {
     menuBtn.classList.remove('open');
     navItems.classList.remove('open-nav-items');
     background.classList.remove('open-menu-background');
+    setTimeout(function () {
+      background.style.display = "none";
+    }, 200);
     body.classList.remove('no-scrolling');
     menuOpen = false;
     dropdownOpen = false;
@@ -33,6 +37,9 @@ window.addEventListener("resize", function () {
       menuBtn.classList.remove('open');
       navItems.classList.remove('open-nav-items');
       background.classList.remove('open-menu-background');
+      setTimeout(function () {
+        background.style.display = "none";
+      }, 200);
       body.classList.remove('no-scrolling');
       menuOpen = false;
       navBrand.style.opacity = 1;

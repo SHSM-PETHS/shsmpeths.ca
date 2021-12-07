@@ -14,13 +14,6 @@ compulsoryCertificationsCloseButton.onclick = function () {
   }, 200);
 }
 
-window.onclick = function (event) {
-  if (event.target == compulsoryCertificationsModal) {
-    compulsoryCertificationsModal.style.visibility = "hidden";
-    compulsoryCertificationsModal.style.opacity = "0";
-  }
-}
-
 var electiveCertificationsModal = document.getElementById("electiveCertificationsModal");
 var electiveCertificationsButton = document.getElementById("electiveCertificationsButton");
 var electiveCertificationsCloseButton = document.getElementById("electiveCertificationsCloseButton");
@@ -35,13 +28,6 @@ electiveCertificationsCloseButton.onclick = function () {
   setTimeout(function () {
     electiveCertificationsModal.style.visibility = "hidden";
   }, 200);
-}
-
-window.onclick = function (event) {
-  if (event.target == electiveCertificationsModal) {
-    electiveCertificationsModal.style.visibility = "hidden";
-    electiveCertificationsModal.style.opacity = "0";
-  }
 }
 
 var reachAheadsModal = document.getElementById("reachAheadsModal");
@@ -60,13 +46,6 @@ reachAheadsCloseButton.onclick = function () {
   }, 200);
 }
 
-window.onclick = function (event) {
-  if (event.target == reachAheadsModal) {
-    reachAheadsModal.style.visibility = "hidden";
-    reachAheadsModal.style.opacity = "0";
-  }
-}
-
 var experientialLearningsModal = document.getElementById("experientialLearningsModal");
 var experientialLearningsButton = document.getElementById("experientialLearningsButton");
 var experientialLearningsCloseButton = document.getElementById("experientialLearningsCloseButton");
@@ -81,13 +60,6 @@ experientialLearningsCloseButton.onclick = function () {
   setTimeout(function () {
     experientialLearningsModal.style.visibility = "hidden";
   }, 200);
-}
-
-window.onclick = function (event) {
-  if (event.target == experientialLearningsModal) {
-    experientialLearningsModal.style.visibility = "hidden";
-    experientialLearningsModal.style.opacity = "0";
-  }
 }
 
 var SPEModal = document.getElementById("SPEModal");
@@ -106,13 +78,6 @@ SPECloseButton.onclick = function () {
   }, 200);
 }
 
-window.onclick = function (event) {
-  if (event.target == SPEModal) {
-    SPEModal.style.visibility = "hidden";
-    SPEModal.style.opacity = "0";
-  }
-}
-
 var coopPlacementsModal = document.getElementById("coopPlacementsModal");
 var coopPlacementsButton = document.getElementById("coopPlacementsButton");
 var coopPlacementsCloseButton = document.getElementById("coopPlacementsCloseButton");
@@ -127,13 +92,6 @@ coopPlacementsCloseButton.onclick = function () {
   setTimeout(function () {
     coopPlacementsModal.style.visibility = "hidden";
   }, 200);
-}
-
-window.onclick = function (event) {
-  if (event.target == coopPlacementsModal) {
-    coopPlacementsModal.style.visibility = "hidden";
-    coopPlacementsModal.style.opacity = "0";
-  }
 }
 
 var majorCreditsModal = document.getElementById("majorCreditsModal");
@@ -152,13 +110,6 @@ majorCreditsCloseButton.onclick = function () {
   }, 200);
 }
 
-window.onclick = function (event) {
-  if (event.target == majorCreditsModal) {
-    majorCreditsModal.style.visibility = "hidden";
-    majorCreditsModal.style.opacity = "0";
-  }
-}
-
 var requiredEnglishModal = document.getElementById("requiredEnglishModal");
 var requiredEnglishButton = document.getElementById("requiredEnglishButton");
 var requiredEnglishCloseButton = document.getElementById("requiredEnglishCloseButton");
@@ -173,13 +124,6 @@ requiredEnglishCloseButton.onclick = function () {
   setTimeout(function () {
     requiredEnglishModal.style.visibility = "hidden";
   }, 200);
-}
-
-window.onclick = function (event) {
-  if (event.target == requiredEnglishModal) {
-    requiredEnglishModal.style.visibility = "hidden";
-    requiredEnglishModal.style.opacity = "0";
-  }
 }
 
 var requiredMathModal = document.getElementById("requiredMathModal");
@@ -197,13 +141,6 @@ if (requiredMathButton != null) {
     setTimeout(function () {
       requiredMathModal.style.visibility = "hidden";
     }, 200);
-  }
-
-  window.onclick = function (event) {
-    if (event.target == requiredMathModal) {
-      requiredMathModal.style.visibility = "hidden";
-      requiredMathModal.style.opacity = "0";
-    }
   }
 }
 
@@ -225,7 +162,54 @@ relatedCreditsCloseButton.onclick = function () {
 
 window.onclick = function (event) {
   if (event.target == relatedCreditsModal) {
-    relatedCreditsModal.style.visibility = "hidden";
     relatedCreditsModal.style.opacity = "0";
+    setTimeout(function () {
+      relatedCreditsModal.style.visibility = "hidden";
+    }, 200);
+  } else if (requiredMathModal != null && event.target == requiredMathModal) {
+    requiredMathModal.style.opacity = "0";
+    setTimeout(function () {
+      requiredMathModal.style.visibility = "hidden";
+    }, 200);
+  } else if (event.target == requiredEnglishModal) {
+    requiredEnglishModal.style.opacity = "0";
+    setTimeout(function () {
+      requiredEnglishModal.style.visibility = "hidden";
+    }, 200);
+  } else if (event.target == majorCreditsModal) {
+    majorCreditsModal.style.opacity = "0";
+    setTimeout(function () {
+      majorCreditsModal.style.visibility = "hidden";
+    }, 200);
+  } else if (event.target == coopPlacementsModal) {
+    coopPlacementsModal.style.opacity = "0";
+    setTimeout(function () {
+      coopPlacementsModal.style.visibility = "hidden";
+    }, 200);
+  } else if (event.target == SPEModal) {
+    SPEModal.style.opacity = "0";
+    setTimeout(function () {
+      SPEModal.style.visibility = "hidden";
+    }, 200);
+  } else if (event.target == experientialLearningsModal) {
+    experientialLearningsModal.style.opacity = "0";
+    setTimeout(function () {
+      experientialLearningsModal.style.visibility = "hidden";
+    }, 200);
+  } else if (event.target == reachAheadsModal) {
+    reachAheadsModal.style.opacity = "0";
+    setTimeout(function () {
+      reachAheadsModal.style.visibility = "hidden";
+    }, 200);
+  } else if (event.target == electiveCertificationsModal) {
+    electiveCertificationsModal.style.opacity = "0";
+    setTimeout(function () {
+      electiveCertificationsModal.style.visibility = "hidden";
+    }, 200);
+  } else if (event.target == compulsoryCertificationsModal) {
+    compulsoryCertificationsModal.style.opacity = "0";
+    setTimeout(function () {
+      compulsoryCertificationsModal.style.visibility = "hidden";
+    }, 200);
   }
 }
