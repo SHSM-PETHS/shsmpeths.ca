@@ -117,12 +117,10 @@ document.addEventListener('click', function (e) {
     dropdownItems.style.opacity = "1";
     dropdownItems.style.display = "block";
     dropdownOpen = true;
-    console.log('open');
   } else {
     dropdownItems.classList.remove('open-dropdown');
     dropdownItems.style.opacity = "0";
     dropdownItems.style.display = "none";
     dropdownOpen = false;
-    console.log('close');
   }
 });
