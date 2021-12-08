@@ -78,7 +78,7 @@
 /* General Styles */
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 * {
