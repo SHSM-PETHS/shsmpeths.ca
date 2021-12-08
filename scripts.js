@@ -114,9 +114,15 @@ window.addEventListener("resize", function () {
 document.addEventListener('click', function (e) {
   if (!dropdownOpen && e.target.innerText == dropdown.innerText && window.innerWidth <= 992) {
     dropdownItems.classList.add('open-dropdown');
+    dropdownItems.style.opacity = "1";
+    dropdownItems.style.display = "block";
     dropdownOpen = true;
+    console.log('open');
   } else {
     dropdownItems.classList.remove('open-dropdown');
+    dropdownItems.style.opacity = "0";
+    dropdownItems.style.display = "none";
     dropdownOpen = false;
+    console.log('close');
   }
 });
