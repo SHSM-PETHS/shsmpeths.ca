@@ -113,6 +113,7 @@ a {
   width: 75%;
   margin: 0px auto 0px;
   max-width: 1024px;
+  z-index: 1;
 }
 
 .header {
@@ -326,7 +327,7 @@ a {
 .modal {
   visibility: hidden;
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   left: 0;
   top: 0;
   width: 100%;
@@ -781,7 +782,6 @@ a {
   box-shadow: var(--drop-shadow);
   margin-top: 20px;
   position: relative;
-  z-index: 0;
 }
 
 .form-title {
@@ -907,6 +907,7 @@ input[type=submit]:hover {
   display: flex;
   align-items: center;
   transition: opacity .2s ease-in-out;
+  z-index: 2;
 }
 
 .nav-logo {
@@ -959,7 +960,7 @@ input[type=submit]:hover {
   visibility: hidden;
   position: absolute;
   min-width: 160px;
-  z-index: 1;
+  z-index: 3;
   padding-top: 10px;
   transition: visibility .2s ease-in-out;
 }
@@ -1005,7 +1006,7 @@ input[type=submit]:hover {
   right: 5vw;
   top: 50px;
   display: none;
-  z-index: 2;
+  z-index: 3;
 }
 
 .menu-btn {
@@ -1082,8 +1083,7 @@ input[type=submit]:hover {
 }
 
 .no-scrolling {
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* Footer */
@@ -1213,10 +1213,11 @@ input[type=submit]:hover {
 
 @media only screen and (max-width: 992px) {
   .dark-mode-toggle {
+    display: inline-block;
     padding: 10px 12px;
     position: fixed;
     bottom: 5vh;
-    right: 5vw;
+    left: 5vw;
     border-radius: 60px;
     background-color: var(--primary-color);
   }
@@ -1246,7 +1247,7 @@ input[type=submit]:hover {
     transform: translate(-50%, -50%);
     opacity: 0;
     text-align: center;
-    z-index: 2;
+    z-index: 3;
     transition: opacity .2s ease-in-out;
   }
 

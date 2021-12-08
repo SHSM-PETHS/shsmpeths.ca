@@ -16,12 +16,14 @@ menuBtn.addEventListener('click', () => {
     body.classList.add('no-scrolling');
     menuOpen = true;
     navBrand.style.opacity = 0;;
+    navItems.style.display = "block";
   } else {
     menuBtn.classList.remove('open');
     navItems.classList.remove('open-nav-items');
     background.classList.remove('open-menu-background');
     setTimeout(function () {
       background.style.display = "none";
+      navItems.style.display = "none";
     }, 200);
     body.classList.remove('no-scrolling');
     menuOpen = false;
@@ -42,10 +44,15 @@ window.addEventListener("resize", function () {
       }, 200);
       body.classList.remove('no-scrolling');
       menuOpen = false;
+      dropdownOpen = false;
+      dropdownItems.classList.remove('open-dropdown');
       navBrand.style.opacity = 1;
     }
     dropdownOpen = false;
     dropdownItems.classList.remove('open-dropdown');
+    navItems.style.display = "flex";
+  } else {
+    navItems.style.display = "block";
   }
 });
 
