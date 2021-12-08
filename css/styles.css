@@ -83,7 +83,9 @@ html {
 
 * {
   box-sizing: border-box;
-  -webkit-appearance: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 body {
@@ -186,6 +188,7 @@ a {
   position: absolute;
   top: -30px;
   right: 0px;
+  z-index: -1;
 }
 
 /* Home */
@@ -891,14 +894,11 @@ input[type=submit]:hover {
 .graphics {
   min-width: 42%;
   min-height: 100%;
-  max-width: 100%;
   position: relative;
 }
 
 .graphic {
-  width: 190px;
-  height: 190px;
-  padding: 40px;
+  padding: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
