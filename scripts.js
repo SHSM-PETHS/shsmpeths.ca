@@ -60,6 +60,7 @@ const openMenu = () => {
 
 const closeMenu = () => {
   menuOpen = false;
+  dropdownOpen = false;
   darkModeToggle.style.display = "fixed";
   menuButton.classList.remove('open');
   navItems.style.opacity = "0";
@@ -67,9 +68,9 @@ const closeMenu = () => {
   setTimeout(function () {
     menuBackground.style.display = "none";
     navItems.style.display = "none";
+    dropdownItems.style.display = "none";
   }, 200);
   body.style.overflow = "auto";
-  dropdownOpen = false;
 }
 
 menuButton.addEventListener('click', () => {
@@ -84,13 +85,16 @@ menuButton.addEventListener('click', () => {
 window.addEventListener("resize", function () {
   if (menuOpen == true) {
     menuOpen = false;
+    dropdownOpen = false;
     darkModeToggle.style.display = "fixed";
     menuButton.classList.remove('open');
     navItems.style.opacity = "0";
+    navItems.style.display = "none";
     menuBackground.style.opacity = "0";
     menuBackground.style.display = "none";
+    dropdownItems.style.opacity = "0";
+    dropdownItems.style.display = "none";
     body.style.overflow = "auto";
-    dropdownOpen = false;
     dropdownItems.classList.remove('open-dropdown');
   }
   navItems.style.display = "none";
@@ -99,7 +103,11 @@ window.addEventListener("resize", function () {
     navItems.style.opacity = "1";
   } else {
     navItems.style.opacity = "0";
-    navItems.style.display = "block";
+    navItems.style.display = "none";
+    menuBackground.style.opacity = "0";
+    menuBackground.style.display = "none";
+    dropdownItems.style.opacity = "0";
+    dropdownItems.style.display = "none";
   }
 });
 

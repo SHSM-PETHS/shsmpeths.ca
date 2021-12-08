@@ -1218,7 +1218,7 @@ input[type=submit]:hover {
     padding: 10px 12px;
     position: fixed;
     bottom: 5vh;
-    left: 5vw;
+    right: 5vw;
     border-radius: 60px;
     background-color: var(--primary-color);
   }
