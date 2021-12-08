@@ -46,8 +46,8 @@
   --btn-main-color: #DBF0FF;
   --btn-sub-color: #142850;
   --highlight-color: #1C366A;
-  --arts-and-culture-color: #B0A0D4;
-  --ict-color: #D0DC9F;
+  --arts-and-culture-color: #72619e;
+  --ict-color: #8c9959;
   --business-color: #CAB09A;
   --health-and-wellness-color: #D2A7A5;
   --experiential-learning-color: #DFFFE4;
@@ -83,7 +83,9 @@ html {
 
 * {
   box-sizing: border-box;
-  -webkit-appearance: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 body {
@@ -117,6 +119,7 @@ a {
 
 .header {
   min-height: 450px;
+  display: flex;
 }
 
 .bg-light,
@@ -185,6 +188,7 @@ a {
   position: absolute;
   top: -30px;
   right: 0px;
+  z-index: -1;
 }
 
 /* Home */
@@ -617,7 +621,7 @@ a {
 }
 
 .header-text {
-  max-width: 58%;
+  min-width: 58%;
 }
 
 .description {
@@ -886,9 +890,64 @@ input[type=submit]:hover {
   background-color: #CEE4EF;
 }
 
+/* Graphics */
+.graphics {
+  min-width: 42%;
+  min-height: 100%;
+  position: relative;
+}
+
+.graphic {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.art {
+  background-color: var(--arts-and-culture-color);
+  border-radius: 200px 200px 20px 200px;
+  top: -30px;
+  left: 70px;
+}
+
+.ict {
+  background-color: var(--ict-color);
+  border-radius: 50px;
+  top: 0px;
+  left: 290px;
+  height: 160px;
+}
+
+.business {
+  background-color: var(--business-color);
+  border-radius: 50px 50px 200px 50px;
+  left: 140px;
+  top: 190px;
+}
+
+.health-and-wellness {
+  background-color: var(--health-and-wellness-color);
+  border-radius: 300px;
+  left: 350px;
+  top: 190px;
+}
+
+.graphic-icon {
+  width: 90px;
+  filter: invert(4%) sepia(92%) saturate(5212%) hue-rotate(240deg) brightness(66%) contrast(101%);
+}
+
+.business-graphic-icon {
+  position: relative;
+  right: 10px;
+  bottom: 10px;
+}
+
 /* Navigation Bar */
 .navbar {
-  margin: 50px auto 60px;
+  margin: 50px auto 3vh;
   width: 90%;
   display: grid;
   max-width: 1284px;
@@ -1167,6 +1226,32 @@ input[type=submit]:hover {
 }
 
 @media only screen and (max-width: 1200px) {
+  .graphic {
+    width: 170px;
+    height: 170px;
+  }
+
+  .art {
+    top: -10px;
+    left: 50px;
+  }
+
+  .ict {
+    top: 10px;
+    left: 250px;
+    height: 150px;
+  }
+
+  .business {
+    left: 110px;
+    top: 190px;
+  }
+
+  .health-and-wellness {
+    top: 190px;
+    left: 305px;
+  }
+
   .nav-title {
     font-size: 1.25em;
   }
@@ -1212,7 +1297,29 @@ input[type=submit]:hover {
   }
 }
 
+@media only screen and (max-width: 1100px) {
+  .art {
+    left: 20px;
+  }
+
+  .ict {
+    left: 220px;
+  }
+
+  .business {
+    left: 80px;
+  }
+
+  .health-and-wellness {
+    left: 275px;
+  }
+}
+
 @media only screen and (max-width: 992px) {
+  .graphics {
+    display: none;
+  }
+
   .dark-mode-toggle {
     display: inline-block;
     padding: 10px 12px;

@@ -55,6 +55,7 @@ const openMenu = () => {
     navItems.style.opacity = "0.9";
     menuBackground.style.opacity = "0.9";
   }, 1);
+  body.style.maxHeight = "100vh";
   body.style.overflow = "hidden";
 }
 
@@ -70,6 +71,7 @@ const closeMenu = () => {
     navItems.style.display = "none";
     dropdownItems.style.display = "none";
   }, 200);
+  body.style.maxHeight = "none";
   body.style.overflow = "auto";
 }
 
