@@ -113,7 +113,6 @@ a {
   width: 75%;
   margin: 0px auto 0px;
   max-width: 1024px;
-  z-index: 1;
 }
 
 .header {
@@ -186,7 +185,6 @@ a {
   position: absolute;
   top: -30px;
   right: 0px;
-  z-index: 0;
 }
 
 /* Home */
@@ -327,7 +325,7 @@ a {
 .modal {
   visibility: hidden;
   position: fixed;
-  z-index: 4;
+  z-index: 3;
   left: 0;
   top: 0;
   width: 100%;
@@ -900,19 +898,18 @@ input[type=submit]:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
 }
 
 .nav-brand {
   display: flex;
   align-items: center;
   transition: opacity .2s ease-in-out;
-  z-index: 2;
 }
 
 .nav-logo {
   width: 60px;
   filter: var(--filter-drop-shadow);
+  z-index: 1;
 }
 
 .nav-title {
@@ -921,6 +918,8 @@ input[type=submit]:hover {
   font-size: 1.5rem;
   margin-left: 20px;
   color: var(--primary-color);
+  z-index: 1;
+
 }
 
 .footer-title {
@@ -935,6 +934,7 @@ input[type=submit]:hover {
 .nav-items {
   display: flex;
   align-items: center;
+  z-index: 4;
 }
 
 .nav-item {
@@ -1018,6 +1018,7 @@ input[type=submit]:hover {
   height: 48px;
   cursor: pointer;
   transition: all .5s ease-in-out, height 0s, width 0s;
+  z-index: 2;
 }
 
 .menu-btn-burger {
@@ -1231,10 +1232,6 @@ input[type=submit]:hover {
     margin-bottom: 0px;
   }
 
-  .footer {
-    margin-top: 0px;
-  }
-
   .mobile-nav {
     display: block;
   }
@@ -1247,8 +1244,8 @@ input[type=submit]:hover {
     transform: translate(-50%, -50%);
     opacity: 0;
     text-align: center;
-    z-index: 3;
     transition: opacity .2s ease-in-out;
+    z-index: 3;
   }
 
   .nav-item {
