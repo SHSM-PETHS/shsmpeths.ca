@@ -73,7 +73,7 @@ const closeMenu = () => {
   }, 200);
   body.style.maxHeight = "none";
   body.style.overflow = "auto";
-}
+};
 
 menuButton.addEventListener('click', () => {
   if (!menuOpen) {
