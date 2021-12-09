@@ -36,6 +36,12 @@
   --wave-filter: invert(88%) sepia(7%) saturate(1093%) hue-rotate(185deg) brightness(103%) contrast(104%);
   --icon-filter: invert(4%) sepia(92%) saturate(5212%) hue-rotate(240deg) brightness(66%) contrast(101%);
   --mode-icon-filter: invert(90%) sepia(3%) saturate(1635%) hue-rotate(189deg) brightness(105%) contrast(104%);
+  --unfocused-arts-and-culture-icon-filter: invert(78%) sepia(82%) saturate(523%) hue-rotate(188deg) brightness(103%) contrast(103%);
+  --unfocused-ict-icon-filter: invert(94%) sepia(9%) saturate(1298%) hue-rotate(22deg) brightness(103%) contrast(105%);
+  --unfocused-business-icon-filter: invert(97%) sepia(61%) saturate(880%) hue-rotate(301deg) brightness(102%) contrast(101%);
+  --unfocused-health-and-wellness-icon-filter: invert(79%) sepia(6%) saturate(1572%) hue-rotate(314deg) brightness(102%) contrast(104%);
+  --unfocused-icon-filter: invert(84%) sepia(17%) saturate(331%) hue-rotate(155deg) brightness(92%) contrast(86%);
+  --unfocused-graphic-color: #E3F2FD;
 }
 
 [data-theme="dark"] {
@@ -73,6 +79,8 @@
   --wave-filter: invert(7%) sepia(22%) saturate(6507%) hue-rotate(223deg) brightness(94%) contrast(108%);
   --icon-filter: invert(83%) sepia(5%) saturate(1256%) hue-rotate(183deg) brightness(110%) contrast(102%);
   --mode-icon-filter: invert(5%) sepia(98%) saturate(1701%) hue-rotate(224deg) brightness(94%) contrast(97%);
+  --unfocused-icon-filter: invert(16%) sepia(45%) saturate(2433%) hue-rotate(203deg) brightness(90%) contrast(90%);
+  --unfocused-graphic-color: #142850;
 }
 
 /* General Styles */
@@ -188,7 +196,6 @@ a {
   position: absolute;
   top: -30px;
   right: 0px;
-  z-index: -1;
 }
 
 /* Home */
@@ -746,7 +753,6 @@ a {
 .step-number {
   padding: 15px;
   border-radius: 60px;
-  background-color: var(--bg-color);
   position: absolute;
   top: -20px;
   width: 70px;
@@ -754,6 +760,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: var(--drop-shadow);
+  background-color: var(--bg-color);
 }
 
 .step-number-left {
@@ -818,9 +826,9 @@ textarea {
   font-size: 1rem;
 }
 
-input[type=text]::selection,
-textarea::selection {
-  border: 1px solid var(--tertiary-color);
+input[type=text]:focus,
+textarea:focus {
+  outline: 1px solid var(--tertiary-color);
 }
 
 textarea {
@@ -828,7 +836,7 @@ textarea {
   min-width: 100%;
 }
 
-input[type=submit] {
+.btn-submit {
   border-radius: 10px;
   padding: 16px 24px;
   font-family: 'Philosopher', sans-serif;
@@ -842,7 +850,7 @@ input[type=submit] {
   box-shadow: var(--drop-shadow);
 }
 
-input[type=submit]:hover {
+.btn-submit:hover {
   transform: scale(1.05);
 }
 
@@ -903,6 +911,12 @@ input[type=submit]:hover {
   align-items: center;
   justify-content: center;
   position: absolute;
+  box-shadow: var(--drop-shadow);
+  transition: transform .2s ease-in-out;
+}
+
+.graphic:hover {
+  transform: scale(1.05);
 }
 
 .art {
@@ -943,6 +957,39 @@ input[type=submit]:hover {
   position: relative;
   right: 10px;
   bottom: 10px;
+}
+
+.user-icon {
+  width: 70px;
+}
+
+.unfocused-graphic {
+  background-color: var(--unfocused-graphic-color);
+  box-shadow: none;
+}
+
+.unfocused-graphic:hover {
+  transform: none;
+}
+
+.unfocused-icon {
+  filter: var(--unfocused-icon-filter)
+}
+
+.unfocused-arts-and-culture-icon {
+  filter: var(--unfocused-arts-and-culture-icon-filter);
+}
+
+.unfocused-business-icon {
+  filter: var(--unfocused-business-icon-filter);
+}
+
+.unfocused-ict-icon {
+  filter: var(--unfocused-ict-icon-filter);
+}
+
+.unfocused-health-and-wellness-icon {
+  filter: var(--unfocused-health-and-wellness-icon-filter);
 }
 
 /* Navigation Bar */
@@ -1096,9 +1143,7 @@ input[type=submit]:hover {
   width: 40px;
   height: 8px;
   background-color: var(--primary-color);
-  transition: all .5s ease-in-out,
-    height 0s,
-    width 0s;
+  transition: all .5s ease-in-out;
 }
 
 .menu-btn-burger::before {
@@ -1238,18 +1283,18 @@ input[type=submit]:hover {
 
   .ict {
     top: 10px;
-    left: 250px;
+    left: 245px;
     height: 150px;
   }
 
   .business {
     left: 110px;
-    top: 190px;
+    top: 185px;
   }
 
   .health-and-wellness {
-    top: 190px;
-    left: 305px;
+    top: 185px;
+    left: 300px;
   }
 
   .nav-title {
