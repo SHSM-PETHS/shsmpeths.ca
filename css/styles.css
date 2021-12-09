@@ -826,9 +826,9 @@ textarea {
   font-size: 1rem;
 }
 
-input[type=text]::selection,
-textarea::selection {
-  border: 1px solid var(--tertiary-color);
+input[type=text]:focus,
+textarea:focus {
+  outline: 1px solid var(--tertiary-color);
 }
 
 textarea {
@@ -836,7 +836,7 @@ textarea {
   min-width: 100%;
 }
 
-input[type=submit] {
+.btn-submit {
   border-radius: 10px;
   padding: 16px 24px;
   font-family: 'Philosopher', sans-serif;
@@ -850,7 +850,7 @@ input[type=submit] {
   box-shadow: var(--drop-shadow);
 }
 
-input[type=submit]:hover {
+.btn-submit:hover {
   transform: scale(1.05);
 }
 

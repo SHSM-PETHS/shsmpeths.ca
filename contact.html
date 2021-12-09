@@ -1,3 +1,9 @@
+<!-- <?php
+echo "<pre>";
+$_POST;
+echo '</pre>';
+?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,14 +87,14 @@
             data-aos-once="true">
             <div class="contact-form">
               <h2 class="form-title">Say hello!</h2>
-              <form method="post" action="contact-form.php">
+              <form method="POST" action="contact-form.php">
                 <label for="name">NAME</label><br>
-                <input type="text" id="name" name="name"><br>
+                <input type="text" id="name" name="name" tabindex="1" required><br>
                 <label for="email">EMAIL</label><br>
-                <input type="text" id="email" name="email"><br>
+                <input type="text" id="email" name="email" tabindex="2" required><br>
                 <label for="message">MESSAGE</label><br>
-                <textarea name="message" rows="10"></textarea><br>
-                <input type="submit" value="Submit!">
+                <textarea id="message" name="message" rows="10" tabindex="3" required></textarea><br>
+                <button class="btn-submit">Send!</button>
               </form>
               <div class="social-buttons">
                 <a href="https://www.instagram.com/shsm.peths/" target="_blank" class="social-button">
