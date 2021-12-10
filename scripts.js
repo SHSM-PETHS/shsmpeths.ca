@@ -56,7 +56,7 @@ const openMenu = () => {
     menuBackground.style.opacity = "0.9";
   }, 1);
   body.style.maxHeight = "100vh";
-  body.style.overflow = "hidden";
+  body.style.overflowY = "hidden";
 }
 
 const closeMenu = () => {
@@ -72,7 +72,7 @@ const closeMenu = () => {
     dropdownItems.style.display = "none";
   }, 200);
   body.style.maxHeight = "none";
-  body.style.overflow = "auto";
+  body.style.overflowY = "auto";
 };
 
 menuButton.addEventListener('click', () => {
@@ -114,7 +114,7 @@ window.addEventListener("resize", function () {
     menuBackground.style.display = "none";
     dropdownItems.style.opacity = "0";
     dropdownItems.style.display = "none";
-    body.style.overflow = "auto";
+    body.style.overflowY = "auto";
     body.style.maxHeight = "none";
     dropdownItems.classList.remove('open-dropdown');
   }

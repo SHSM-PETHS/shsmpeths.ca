@@ -1,7 +1,7 @@
-const modalButtons = document.querySelectorAll('.event-expand');
+const modalButtons = document.querySelectorAll('.requirement-question-button');
 modalButtons.forEach(btn => {
   btn.addEventListener('click', e => {
-    const id = btn.getAttribute('button-id');
+    const id = btn.getAttribute('open-id');
     var modal = document.querySelector(`[modal-id="${id}"]`);
     modal.style.visibility = "visible";
     modal.style.opacity = "1";
@@ -20,12 +20,10 @@ closeButtons.forEach(btn => {
   });
 });
 
-const modals = document.querySelectorAll('.event-modal');
+const modals = document.querySelectorAll('.modal');
 window.onclick = function (e) {
   modals.forEach(
     function (modal) {
-      console.log(modal);
-      console.log(e);
       if (e.target == modal) {
         modal.style.opacity = "0";
         setTimeout(function () {

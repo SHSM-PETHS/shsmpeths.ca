@@ -491,10 +491,6 @@ a {
   background: var(--event-gradient);
 }
 
-.event-button {
-  cursor: pointer;
-}
-
 .event-modal-content {
   position: absolute;
   width: 70%;
