@@ -390,7 +390,6 @@ a {
 /* Our Team */
 .team-card {
   width: auto;
-  position: auto;
   filter: var(--filter-drop-shadow);
   transition: transform .2s ease-in-out;
 }
