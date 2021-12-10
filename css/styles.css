@@ -692,7 +692,7 @@ a {
 }
 
 .steps-card {
-  background-image: var(--bg-dark-gradient);
+  background: var(--bg-dark-gradient);
   width: 100%;
   padding: 50px 50px 60px;
   box-shadow: var(--drop-shadow);
@@ -759,7 +759,7 @@ a {
   align-items: center;
   justify-content: center;
   box-shadow: var(--drop-shadow);
-  background-color: var(--bg-color);
+  background-color: var(--highlight-color);
 }
 
 .step-number-left {
