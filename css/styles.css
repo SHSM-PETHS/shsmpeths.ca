@@ -786,7 +786,7 @@ a {
 }
 
 /* Contact Us */
-.contact-form {
+/* .contact-form {
   width: 100%;
   padding: 70px 90px 90px;
   background: var(--form-gradient);
@@ -898,7 +898,7 @@ textarea {
 
 .social-button:nth-of-type(3) {
   background-color: #CEE4EF;
-}
+} */
 
 /* Graphics */
 .graphics {
